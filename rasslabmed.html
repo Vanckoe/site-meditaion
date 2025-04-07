@@ -1,269 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Дыхательное упражнение</title>
     <style>
-        body {
-            background: linear-gradient(to bottom, #f8f9fa, #e3f2fd);
-            font-family: 'Raleway', sans-serif;
-        }
-        .pulse-info {
-            background: #fff;
-            padding: 100px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            margin: 50px auto;
-            width: 70%;
-        }
-        .pulse-info h2 {
-            font-size: 26px;
-            color: #ff6f91;
-            margin-bottom: 10px;
-        }
-        .pulse-info p {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .pulse-info ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-        .pulse-info li {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 5px;}
+      body {
+        background: linear-gradient(to bottom, #f8f9fa, #e3f2fd);
+        font-family: "Raleway", sans-serif;
+      }
+      .pulse-info {
+        background: #fff;
+        padding: 100px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        margin: 50px auto;
+        width: 70%;
+      }
+      .pulse-info h2 {
+        font-size: 26px;
+        color: #ff6f91;
+        margin-bottom: 10px;
+      }
+      .pulse-info p {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      .pulse-info ul {
+        list-style: disc;
+        padding-left: 20px;
+      }
+      .pulse-info li {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 5px;
+      }
 
-        .breathing-box {
-            background: #fff;
-            padding: 0px;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin: auto 50px;
-            width: 80%;
-        }
-        .circle {
-            width: 200px;
-            height: 200px;
-            background-color: #f4a6c0;
-            border: 5px solid #ffb3c6;
-            box-shadow: 0 0 20px rgba(244, 166, 192, 0.5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: bold;
-            margin: 50px auto;
-            transition: transform 3s ease-in-out;
-        }
-        .breathing-box h2 {
-            font-size: 28px;
-            color: #ff6f91;
-            margin-bottom: 20px;
-        }
-        .breathing-box p {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        input[type='number'] {
-            padding: 15px;
-            font-size: 22px;
-            border: 3px solid #f4a6c0;
-            border-radius: 10px;
-            width: 250px;
-            text-align: center;
-            outline: none;
-            display: block;
-            margin: 20px auto;
-            background: #fff;
-            color: #333;
-        }
-        button {
-            padding: 15px 30px;
-            font-size: 22px;
-            font-weight: bold;
-            background-color: #ff6f91;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            display: block;
-            margin: 20px auto;
-        }
-        button:hover {
-            background-color: #e85d7b;
-        }
-        .result {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2e7d32;
-            margin-top: 30px;
-            display: none;
-        }
-        body {
-            background: linear-gradient(to bottom, #f8f9fa, #e3f2fd);
-        }
-        .box-header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        .breathing-box {
-            background: #fff;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin: 120px auto 50px;
-            width: 80%;
-        }
-        .circle {
-            width: 180px;
-            height: 180px;
-            background-color: #f4a6c0;
-            border: 4px solid #ffb3c6;
-            box-shadow: 0 0 15px rgba(244, 166, 192, 0.5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 40px auto;
-            transition: transform 3s ease-in-out;
-        }
-        .result {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2e7d32;
-            margin-top: 20px;
-            display: none;
-        }
+      .breathing-box {
+        background: #fff;
+        padding: 0px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: auto 50px;
+        width: 80%;
+      }
+      .circle {
+        width: 200px;
+        height: 200px;
+        background-color: #f4a6c0;
+        border: 5px solid #ffb3c6;
+        box-shadow: 0 0 20px rgba(244, 166, 192, 0.5);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 50px auto;
+        transition: transform 3s ease-in-out;
+      }
+      .breathing-box h2 {
+        font-size: 28px;
+        color: #ff6f91;
+        margin-bottom: 20px;
+      }
+      .breathing-box p {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      input[type="number"] {
+        padding: 15px;
+        font-size: 22px;
+        border: 3px solid #f4a6c0;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+        outline: none;
+        display: block;
+        margin: 20px auto;
+        background: #fff;
+        color: #333;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 22px;
+        font-weight: bold;
+        background-color: #ff6f91;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: block;
+        margin: 20px auto;
+      }
+      button:hover {
+        background-color: #e85d7b;
+      }
+      .result {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2e7d32;
+        margin-top: 30px;
+        display: none;
+      }
+      body {
+        background: linear-gradient(to bottom, #f8f9fa, #e3f2fd);
+      }
+      .box-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+      }
+      .breathing-box {
+        background: #fff;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 120px auto 50px;
+        width: 80%;
+      }
+      .circle {
+        width: 180px;
+        height: 180px;
+        background-color: #f4a6c0;
+        border: 4px solid #ffb3c6;
+        box-shadow: 0 0 15px rgba(244, 166, 192, 0.5);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 40px auto;
+        transition: transform 3s ease-in-out;
+      }
+      .result {
+        font-size: 22px;
+        font-weight: bold;
+        color: #2e7d32;
+        margin-top: 20px;
+        display: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box-header">
-        <header>
-            <h1><a href="index.html"><img src="images/meditation-logo.png" alt="Meditation" class="logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto;" /></a></h1>
-            <nav>
-                <a class="nav u-blue" href="transmed.html" >Стресс-тест</a>
-                <a class="nav u-pink" href="rasslabmed.html">Дыхательная практика</a>
-                <a class="nav u-green" href="focusmed.html">Зона релакса</a>
-                <a class="nav u-peach" href="contact.html">Рекомендации</a>
-            </nav>
-        </header>
+      <header>
+        <h1>
+          <a href="index.html"
+            ><img
+              src="images/meditation-logo.png"
+              alt="Meditation"
+              class="logo"
+              style="
+                max-width: 150px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+              "
+          /></a>
+        </h1>
+        <nav>
+          <a class="nav u-blue" href="transmed.html">Стресс-тест</a>
+          <a class="nav u-pink" href="rasslabmed.html">Дыхательная практика</a>
+          <a class="nav u-green" href="focusmed.html">Зона релакса</a>
+          <a class="nav u-peach" href="contact.html">Рекомендации</a>
+        </nav>
+      </header>
     </div>
     <div class="pulse-info">
-        <h2>Как измерить пульс?</h2>
-        <p>Перед началом дыхательного упражнения важно правильно измерить ваш пульс. Вот несколько способов:</p>
-        <div class="info-box">
-            <h3>1. Вручную (традиционный способ)</h3>
-            <p>Положите два пальца (указательный и средний) на запястье или шею. Найдите пульс и засеките 15 секунд. Подсчитайте удары, затем умножьте это число на 4 – это и будет ваш пульс.</p>
-        </div>
-        <div class="info-box">
-            <h3>2. С помощью смартфона</h3>
-            <p>Используйте приложения вроде <strong>Google Fit, Samsung Health или Welltory</strong>. Просто приложите палец к камере телефона, и приложение покажет ваш пульс.</p>
-        </div>
-        <div class="info-box">
-            <h3>3. Использование смарт-часов</h3>
-            <p>Смарт-часы (Apple Watch, Xiaomi Mi Band, Samsung Galaxy Watch) автоматически измеряют пульс и показывают данные в реальном времени.</p>
-        </div>
-        <h2>Какие бывают дыхательные упражнения?</h2>
-        <ul>
-            <li><strong>4-7-8 Дыхание:</strong> Вдох на 4 секунды, задержка дыхания на 7 секунд, медленный выдох на 8 секунд.</li>
-            <li><strong>Коробочное дыхание:</strong> Вдох — 4 секунды, задержка — 4 секунды, выдох — 4 секунды, снова задержка — 4 секунды.</li>
-            <li><strong>Дыхание со сжатыми губами:</strong> Вдох через нос на 2 секунды, медленный выдох через сжатые губы в 4 раза дольше.</li>
-        </ul>
+      <h2>Как измерить пульс?</h2>
+      <p>
+        Перед началом дыхательного упражнения важно правильно измерить ваш
+        пульс. Вот несколько способов:
+      </p>
+      <div class="info-box">
+        <h3>1. Вручную (традиционный способ)</h3>
+        <p>
+          Положите два пальца (указательный и средний) на запястье или шею.
+          Найдите пульс и засеките 15 секунд. Подсчитайте удары, затем умножьте
+          это число на 4 – это и будет ваш пульс.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>2. С помощью смартфона</h3>
+        <p>
+          Используйте приложения вроде
+          <strong>Google Fit, Samsung Health или Welltory</strong>. Просто
+          приложите палец к камере телефона, и приложение покажет ваш пульс.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>3. Использование смарт-часов</h3>
+        <p>
+          Смарт-часы (Apple Watch, Xiaomi Mi Band, Samsung Galaxy Watch)
+          автоматически измеряют пульс и показывают данные в реальном времени.
+        </p>
+      </div>
+      <h2>Какие бывают дыхательные упражнения?</h2>
+      <ul>
+        <li>
+          <strong>4-7-8 Дыхание:</strong> Вдох на 4 секунды, задержка дыхания на
+          7 секунд, медленный выдох на 8 секунд.
+        </li>
+        <li>
+          <strong>Коробочное дыхание:</strong> Вдох — 4 секунды, задержка — 4
+          секунды, выдох — 4 секунды, снова задержка — 4 секунды.
+        </li>
+        <li>
+          <strong>Дыхание со сжатыми губами:</strong> Вдох через нос на 2
+          секунды, медленный выдох через сжатые губы в 4 раза дольше.
+        </li>
+      </ul>
     </div>
     <div class="breathing-box">
-        <h2 style="margin-bottom: 20px;">Дыхательное упражнение</h2>
-        <p>Введите ваш пульс, и система подберёт оптимальное упражнение.</p>
-        <input type="number" id="pulse" min="40" max="150" placeholder="Например, 75">
-        <button onclick="startExercise()">Старт</button>
-        <h2 id="exercise-name" style="margin-bottom: 40px;">Выберите упражнение</h2>
-        <div class="circle" id="breathing-circle"></div>
-        <p id="timer" style="font-size: 24px; font-weight: bold; color: #ff6f91; background: #ffe4e1; padding: 10px; border-radius: 10px; display: inline-block; margin-top: 20px;">Осталось: 30 сек</p>
-        <p class="result" id="result-message">Молодец! Вы завершили дыхательное упражнение.</p>
+      <h2 style="margin-bottom: 20px">Дыхательное упражнение</h2>
+      <p>Введите ваш пульс, и система подберёт оптимальное упражнение.</p>
+      <input
+        type="number"
+        id="pulse"
+        min="40"
+        max="150"
+        placeholder="Например, 75"
+      />
+      <button onclick="startExercise()">Старт</button>
+      <h2 id="exercise-name" style="margin-bottom: 40px">
+        Выберите упражнение
+      </h2>
+      <div class="circle" id="breathing-circle"></div>
+      <p
+        id="timer"
+        style="
+          font-size: 24px;
+          font-weight: bold;
+          color: #ff6f91;
+          background: #ffe4e1;
+          padding: 10px;
+          border-radius: 10px;
+          display: inline-block;
+          margin-top: 20px;
+        "
+      >
+        Осталось: 30 сек
+      </p>
+      <p class="result" id="result-message">
+        Молодец! Вы завершили дыхательное упражнение.
+      </p>
     </div>
     <script>
-        let breathingInterval, countdown;
+      let breathingInterval, countdown;
 
-        function startExercise() {
-            const pulse = document.getElementById("pulse").value;
-            let duration, exercise;
-            
-            if (pulse < 60) {
-                exercise = "4-7-8 Дыхание";
-                duration = 5000;
-            } else if (pulse >= 60 && pulse <= 90) {
-                exercise = "Коробочное дыхание";
-                duration = 4000;
-            } else {
-                exercise = "Дыхание со сжатыми губами";
-                duration = 3000;
-            }
-            
-            document.getElementById("exercise-name").textContent = exercise;
-            startBreathingAnimation(duration);
+      function startExercise() {
+        const pulse = document.getElementById("pulse").value;
+        let duration, exercise;
+
+        if (pulse < 60) {
+          exercise = "4-7-8 Дыхание";
+          duration = 5000;
+        } else if (pulse >= 60 && pulse <= 90) {
+          exercise = "Коробочное дыхание";
+          duration = 4000;
+        } else {
+          exercise = "Дыхание со сжатыми губами";
+          duration = 3000;
         }
 
-        function startBreathingAnimation(duration) {
-            let inhalePhase = true;
+        document.getElementById("exercise-name").textContent = exercise;
+        startBreathingAnimation(duration);
+      }
+
+      function startBreathingAnimation(duration) {
+        let inhalePhase = true;
+        clearInterval(breathingInterval);
+        clearInterval(countdown);
+        let timeLeft = 30;
+        const circle = document.getElementById("breathing-circle");
+        const timerText = document.getElementById("timer");
+        const resultMessage = document.getElementById("result-message");
+
+        function inhale() {
+          circle.style.transform = "scale(1.5)";
+          circle.textContent = "Вдох";
+          setTimeout(exhale, duration);
+          setTimeout(exhale, duration);
+        }
+        function exhale() {
+          circle.style.transform = "scale(1)";
+          circle.textContent = "Выдох";
+          setTimeout(inhale, duration);
+        }
+
+        inhale();
+        breathingInterval = setInterval(inhale, duration * 2);
+
+        countdown = setInterval(() => {
+          timeLeft--;
+          timerText.textContent = `Осталось: ${timeLeft} сек`;
+          if (timeLeft <= 0) {
             clearInterval(breathingInterval);
             clearInterval(countdown);
-            let timeLeft = 30;
-            const circle = document.getElementById("breathing-circle");
-            const timerText = document.getElementById("timer");
-            const resultMessage = document.getElementById("result-message");
-            
-            function inhale() {
-                circle.style.transform = "scale(1.5)";
-                circle.textContent = 'Вдох';
-                setTimeout(exhale, duration);;
-                setTimeout(exhale, duration);
-            }
-            function exhale() {
-                circle.style.transform = "scale(1)";
-                circle.textContent = 'Выдох';
-                setTimeout(inhale, duration);
-            }
-            
-            inhale();
-            breathingInterval = setInterval(inhale, duration * 2);
-            
-            countdown = setInterval(() => {
-                timeLeft--;
-                timerText.textContent = `Осталось: ${timeLeft} сек`;
-                if (timeLeft <= 0) {
-                    clearInterval(breathingInterval);
-                    clearInterval(countdown);
-                    resultMessage.style.display = "block";
-                    timerText.style.display = "none";
-                    circle.style.display = "none";
-                }
-            }, 1000);
-        }
+            resultMessage.style.display = "block";
+            timerText.style.display = "none";
+            circle.style.display = "none";
+          }
+        }, 1000);
+      }
     </script>
     <footer class="footer">
-        <div class="footer-content">
-            <p>© 2025 Sanadem. Все права защищены.</p>
-            <p>Контакты: <a href="mailto:info@sanadem.com">info@sanadem.com</a></p>
-            <p>Телефон: +7 (777) 123-45-67</p>
-        </div>
+      <div class="footer-content">
+        <p>© 2025 Sanadem. Все права защищены.</p>
+        <p>Контакты: <a href="mailto:info@sanadem.com">info@sanadem.com</a></p>
+        <p>Телефон: +7 (777) 123-45-67</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

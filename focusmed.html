@@ -1,171 +1,187 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <link rel="stylesheet" href="css/index.css">
-    <meta name="viewport" content="width=device-width, maximum-scale=5.0, minimum-scale=0.86">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=5.0, minimum-scale=0.86"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Расслабление и Медитация</title>
     <style>
-        body {
-            background: linear-gradient(to bottom, #fde2e4, #fadadd);
-            font-family: 'Raleway', sans-serif;
-            color: #333;
-            text-align: center;
-            margin: 100px;
-            padding: 50px;
-        }
-        .box-header {
-            width: 100%;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-            margin-bottom: 30px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-        }
-        .container {
-    max-width: 400px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 100px;
-    border-radius: 40px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    
-    display: flex; /* Включаем Flexbox */
-    flex-direction: column; /* Размещаем элементы вертикально */
-    align-items: center; /* Выравниваем элементы по центру */
-    gap: 20px; /* Добавляет промежуток между элементами */
-}
-        .section {
-            margin-bottom: 120px; /* Уменьшен отступ между секциями */
-            padding-bottom: 20px;
-            border-bottom: 2px solid #f8c1c6;
-            min-height: 80px;
-        }
-        /* Если хотите уменьшить/увеличить отступ, меняйте значение выше */
-        
-        button {
-            padding: 15px 30px;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: #ff6f91;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #e85d7b;
-        }
+      body {
+        background: linear-gradient(to bottom, #fde2e4, #fadadd);
+        font-family: "Raleway", sans-serif;
+        color: #333;
+        text-align: center;
+        margin: 100px;
+        padding: 50px;
+      }
+      .box-header {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        margin-bottom: 30px;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+      }
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 100px;
+        border-radius: 40px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 
-        /* Стили модального окна */
-        .modal {
-            display: none; /* Скрыто по умолчанию */
-            position: fixed; 
-            z-index: 999; 
-            left: 0; 
-            top: 0; 
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0, 0, 0, 0.6); /* Тёмный полупрозрачный фон */
-        }
-        .modal-content {
-            background-color: #fff;
-            margin: 8% auto; /* Позиция окна */
-            padding: 40px 20px;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 500px; /* Максимальная ширина окна */
-            text-align: center;
-            position: relative; /* Для кнопки закрытия */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 32px;
-            font-weight: bold;
-            cursor: pointer;
-            line-height: 32px;
-            color: #666;
-        }
-        .close-btn:hover {
-            color: #e85d7b;
-        }
-        #modal-text {
-            font-size: 22px;
-            line-height: 1.4;
-            margin-bottom: 30px;
-            color: #444;
-        }
-        #modal-next-btn {
-            margin-top: 20px;
-            padding: 12px 25px;
-            font-size: 20px;
-            background-color: #ff6f91;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        #modal-next-btn:hover {
-            background-color: #e85d7b;
-        }
+        display: flex; /* Включаем Flexbox */
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: center; /* Выравниваем элементы по центру */
+        gap: 20px; /* Добавляет промежуток между элементами */
+      }
+      .section {
+        margin-bottom: 120px; /* Уменьшен отступ между секциями */
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f8c1c6;
+        min-height: 80px;
+      }
+      /* Если хотите уменьшить/увеличить отступ, меняйте значение выше */
+
+      button {
+        padding: 15px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #ff6f91;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #e85d7b;
+      }
+
+      /* Стили модального окна */
+      .modal {
+        display: none; /* Скрыто по умолчанию */
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6); /* Тёмный полупрозрачный фон */
+      }
+      .modal-content {
+        background-color: #fff;
+        margin: 8% auto; /* Позиция окна */
+        padding: 40px 20px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 500px; /* Максимальная ширина окна */
+        text-align: center;
+        position: relative; /* Для кнопки закрытия */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 32px;
+        color: #666;
+      }
+      .close-btn:hover {
+        color: #e85d7b;
+      }
+      #modal-text {
+        font-size: 22px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+        color: #444;
+      }
+      #modal-next-btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 20px;
+        background-color: #ff6f91;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      #modal-next-btn:hover {
+        background-color: #e85d7b;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box-header">
-        <header>
-            <h1>
-                <a href="index.html">
-                    <img src="images/meditation-logo.png" alt="Meditation" class="logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto;" />
-                </a>
-            </h1>
-            <nav>
-                <a class="nav u-blue" href="transmed.html">Стресс-тест</a>
-                <a class="nav u-pink" href="rasslabmed.html">Дыхательная практика</a>
-                <a class="nav u-green" href="focusmed.html">Зона релакса</a>
-                <a class="nav u-peach" href="contact.html">Рекомендации</a>
-            </nav>
-        </header>
+      <header>
+        <h1>
+          <a href="index.html">
+            <img
+              src="images/meditation-logo.png"
+              alt="Meditation"
+              class="logo"
+              style="
+                max-width: 150px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+              "
+            />
+          </a>
+        </h1>
+        <nav>
+          <a class="nav u-blue" href="transmed.html">Стресс-тест</a>
+          <a class="nav u-pink" href="rasslabmed.html">Дыхательная практика</a>
+          <a class="nav u-green" href="focusmed.html">Зона релакса</a>
+          <a class="nav u-peach" href="contact.html">Рекомендации</a>
+        </nav>
+      </header>
     </div>
 
     <div class="container">
-        <!-- Музыкальная медитация -->
-        <div class="section" id="music">
-            <h2>Музыкальная медитация</h2>
-            <button onclick="toggleMusic()">▶ Включить музыку</button>
-            <audio id="meditation-audio">
-                <source src="images/music/nature.mp3" type="audio/mpeg">
-                Ваш браузер не поддерживает аудио.
-            </audio>
-        </div>
+      <!-- Музыкальная медитация -->
+      <div class="section" id="music">
+        <h2>Музыкальная медитация</h2>
+        <button onclick="toggleMusic()">▶ Включить музыку</button>
+        <audio id="meditation-audio">
+          <source src="images/music/nature.mp3" type="audio/mpeg" />
+          Ваш браузер не поддерживает аудио.
+        </audio>
+      </div>
 
-        <!-- Прогрессивная релаксация -->
-        <div class="section" id="relaxation">
-            <h2>Прогрессивная релаксация</h2>
-            <!-- Кнопка «Начать» вместо «Следующее упражнение» -->
-            <button onclick="openModal('relaxation')">Начать</button>
-        </div>
+      <!-- Прогрессивная релаксация -->
+      <div class="section" id="relaxation">
+        <h2>Прогрессивная релаксация</h2>
+        <!-- Кнопка «Начать» вместо «Следующее упражнение» -->
+        <button onclick="openModal('relaxation')">Начать</button>
+      </div>
 
-        <!-- Аффирмации -->
-        <div class="section" id="affirmations">
-            <h2>Аффирмации</h2>
-            <!-- Кнопка «Начать» вместо «Следующая аффирмация» -->
-            <button onclick="openModal('affirmation')">Начать</button>
-        </div>
+      <!-- Аффирмации -->
+      <div class="section" id="affirmations">
+        <h2>Аффирмации</h2>
+        <!-- Кнопка «Начать» вместо «Следующая аффирмация» -->
+        <button onclick="openModal('affirmation')">Начать</button>
+      </div>
     </div>
 
     <!-- Модальное окно -->
@@ -178,81 +194,84 @@
     </div>
 
     <script>
-        // --- Управление музыкой ---
-        const audio = document.getElementById("meditation-audio");
-        const musicButton = document.querySelector("#music button");
+      // --- Управление музыкой ---
+      const audio = document.getElementById("meditation-audio");
+      const musicButton = document.querySelector("#music button");
 
-        function toggleMusic() {
-            if (audio.paused) {
-                audio.play();
-                musicButton.textContent = "⏸ Остановить музыку";
-            } else {
-                audio.pause();
-                musicButton.textContent = "▶ Включить музыку";
-            }
+      function toggleMusic() {
+        if (audio.paused) {
+          audio.play();
+          musicButton.textContent = "⏸ Остановить музыку";
+        } else {
+          audio.pause();
+          musicButton.textContent = "▶ Включить музыку";
         }
+      }
 
-        // --- Массивы с текстами ---
-        const relaxSteps = [
-            "Расслабьте плечи, закройте глаза и сделайте три глубоких вдоха...",
-            "Медленно опустите голову на грудь и почувствуйте, как расслабляется шея...",
-            "Поднимите руки вверх, потянитесь и затем мягко опустите их...",
-            "Сконцентрируйтесь на дыхании, сделайте медленный вдох через нос и плавный выдох через рот...",
-            "Ощутите, как тяжесть уходит из ваших ног и ступней...",
-            "Почувствуйте тепло и расслабление в области живота и груди...",
-            "Позвольте всему телу полностью расслабиться и отпустить напряжение..."
-        ];
+      // --- Массивы с текстами ---
+      const relaxSteps = [
+        "Расслабьте плечи, закройте глаза и сделайте три глубоких вдоха...",
+        "Медленно опустите голову на грудь и почувствуйте, как расслабляется шея...",
+        "Поднимите руки вверх, потянитесь и затем мягко опустите их...",
+        "Сконцентрируйтесь на дыхании, сделайте медленный вдох через нос и плавный выдох через рот...",
+        "Ощутите, как тяжесть уходит из ваших ног и ступней...",
+        "Почувствуйте тепло и расслабление в области живота и груди...",
+        "Позвольте всему телу полностью расслабиться и отпустить напряжение...",
+      ];
 
-        const affirmations = [
-            "Сегодня я чувствую себя спокойным и уверенным.",
-            "Я выбираю радость и гармонию в своей жизни.",
-            "Все трудности временны, я справлюсь.",
-            "Я наполнен энергией и вдохновением.",
-            "Я заслуживаю любви и счастья.",
-            "Мой разум ясен, мое сердце спокойно.",
-            "Я дышу глубоко и расслабляюсь."
-        ];
+      const affirmations = [
+        "Сегодня я чувствую себя спокойным и уверенным.",
+        "Я выбираю радость и гармонию в своей жизни.",
+        "Все трудности временны, я справлюсь.",
+        "Я наполнен энергией и вдохновением.",
+        "Я заслуживаю любви и счастья.",
+        "Мой разум ясен, мое сердце спокойно.",
+        "Я дышу глубоко и расслабляюсь.",
+      ];
 
-        // --- Переменные для модального окна ---
-        let modalMode = ""; // "relaxation" или "affirmation"
-        let modalIndex = 0;
-        let currentArray = [];
-        
-        // Функция открытия модального окна в нужном режиме
-        function openModal(mode) {
-            modalMode = mode;
-            modalIndex = 0;
-            currentArray = (mode === "relaxation") ? relaxSteps : affirmations;
-            document.getElementById("modal-text").textContent = currentArray[modalIndex];
-            // Если в массиве больше одного элемента, показываем кнопку "Следующее", иначе "Финиш"
-            document.getElementById("modal-next-btn").textContent = (currentArray.length > 1) ? "Следующее" : "Финиш";
-            document.getElementById("modal").style.display = "block";
+      // --- Переменные для модального окна ---
+      let modalMode = ""; // "relaxation" или "affirmation"
+      let modalIndex = 0;
+      let currentArray = [];
+
+      // Функция открытия модального окна в нужном режиме
+      function openModal(mode) {
+        modalMode = mode;
+        modalIndex = 0;
+        currentArray = mode === "relaxation" ? relaxSteps : affirmations;
+        document.getElementById("modal-text").textContent =
+          currentArray[modalIndex];
+        // Если в массиве больше одного элемента, показываем кнопку "Следующее", иначе "Финиш"
+        document.getElementById("modal-next-btn").textContent =
+          currentArray.length > 1 ? "Следующее" : "Финиш";
+        document.getElementById("modal").style.display = "block";
+      }
+
+      // Функция обработки нажатия кнопки в модальном окне
+      function modalNext() {
+        if (modalIndex === currentArray.length - 1) {
+          closeModal();
+        } else {
+          modalIndex++;
+          document.getElementById("modal-text").textContent =
+            currentArray[modalIndex];
+          if (modalIndex === currentArray.length - 1) {
+            document.getElementById("modal-next-btn").textContent = "Финиш";
+          }
         }
+      }
 
-        // Функция обработки нажатия кнопки в модальном окне
-        function modalNext() {
-            if (modalIndex === currentArray.length - 1) {
-                closeModal();
-            } else {
-                modalIndex++;
-                document.getElementById("modal-text").textContent = currentArray[modalIndex];
-                if (modalIndex === currentArray.length - 1) {
-                    document.getElementById("modal-next-btn").textContent = "Финиш";
-                }
-            }
-        }
-
-        // Функция закрытия модального окна
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
-        }
+      // Функция закрытия модального окна
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
     </script>
     <footer class="footer">
-        <div class="footer-content">
-            <p>© 2025 Sanadem. Все права защищены.</p>
-            <p>Контакты: <a href="mailto:info@sanadem.com">info@sanadem.com</a></p>
-            <p>Телефон: +7 (777) 123-45-67</p>
-        </div>
+      <div class="footer-content">
+        <p>© 2025 Sanadem. Все права защищены.</p>
+        <p>Контакты: <a href="mailto:info@sanadem.com">info@sanadem.com</a></p>
+        <p>Телефон: +7 (777) 123-45-67</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
